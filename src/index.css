@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    --primary: 150 100% 25%; /* Dark Green #053225 */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 150 100% 35%;
+
+    --secondary: 200 30% 96%;
+    --secondary-foreground: 215 25% 15%;
+
+    --muted: 200 30% 96%;
+    --muted-foreground: 215 15% 50%;
+
+    --accent: 340 75% 60%; /* Cerise #E34A6F */
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 340 85% 70%;
+
+    --success: 120 30% 50%; /* Asparagus #60A561 */
+    --success-foreground: 0 0% 100%;
+
+    --warning: 25 15% 60%; /* Khaki #B2A198 */
+    --warning-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 200 20% 90%;
+    --input: 200 20% 90%;
+    --ring: 185 75% 45%;
+
+    --radius: 0.75rem;
+
+    --gradient-hero: linear-gradient(135deg, hsl(150 100% 25%), hsl(120 30% 50%));
+    --gradient-accent: linear-gradient(135deg, hsl(340 75% 60%), hsl(25 15% 60%));
+    --shadow-card: 0 4px 6px -1px hsl(185 75% 45% / 0.1), 0 2px 4px -1px hsl(185 75% 45% / 0.06);
+    --shadow-card-hover: 0 20px 25px -5px hsl(185 75% 45% / 0.15), 0 10px 10px -5px hsl(185 75% 45% / 0.08);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 200 20% 10%;
+    --foreground: 200 20% 96%;
+
+    --card: 200 20% 13%;
+    --card-foreground: 200 20% 96%;
+
+    --popover: 200 20% 13%;
+    --popover-foreground: 200 20% 96%;
+
+    --primary: 150 100% 30%; /* Dark Green más claro para modo oscuro */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 150 100% 40%;
+
+    --secondary: 200 15% 20%;
+    --secondary-foreground: 200 20% 96%;
+
+    --muted: 200 15% 20%;
+    --muted-foreground: 200 10% 65%;
+
+    --accent: 340 75% 65%; /* Cerise más claro para modo oscuro */
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 340 85% 75%;
+
+    --success: 120 30% 55%; /* Asparagus más claro para modo oscuro */
+    --success-foreground: 0 0% 100%;
+
+    --warning: 25 15% 65%; /* Khaki más claro para modo oscuro */
+    --warning-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 200 15% 20%;
+    --input: 200 15% 20%;
+    --ring: 185 75% 50%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(150 100% 30%), hsl(120 30% 55%));
+    --gradient-accent: linear-gradient(135deg, hsl(340 75% 65%), hsl(25 15% 65%));
+    --shadow-card: 0 4px 6px -1px hsl(0 0% 0% / 0.4), 0 2px 4px -1px hsl(0 0% 0% / 0.25);
+    --shadow-card-hover: 0 20px 25px -5px hsl(0 0% 0% / 0.4), 0 10px 10px -5px hsl(0 0% 0% / 0.25);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
